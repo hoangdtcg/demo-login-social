@@ -19,7 +19,7 @@ class SocialController extends Controller
     {
 
         $getInfo = Socialite::driver($provider)->user();
-//        dd($getInfo);
+        dd($getInfo);
         $user = $this->findOrCreateUser($getInfo, $provider);
 
         auth()->login($user);
